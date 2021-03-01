@@ -1,0 +1,11 @@
+CREATE DATABASE DbUsuarios;
+GO
+USE DbUsuarios;
+GO
+CREATE TABLE Usuarios(
+id VARCHAR(255) PRIMARY KEY,
+firstName VARCHAR(255) NOT NULL,
+surname VARCHAR(255) NOT NULL,
+age INT NOT NULL,
+creationDate DATETIME
+);
