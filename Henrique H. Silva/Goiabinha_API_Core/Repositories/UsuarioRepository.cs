@@ -10,6 +10,7 @@ namespace Goiabinha_API_Core.Repositories
 {
     public class UsuarioRepository : IUsuario
     {
+        //Método para deletar um usuário
         public void delete(string id)
         {
             using (GoiabinhaContext Ctx = new GoiabinhaContext())
@@ -22,7 +23,7 @@ namespace Goiabinha_API_Core.Repositories
                 }
             }
         }
-
+        //Método para listar todos os usuários
         public List<Usuarios> get()
         {
             using (GoiabinhaContext Ctx = new GoiabinhaContext())
@@ -31,6 +32,7 @@ namespace Goiabinha_API_Core.Repositories
             }
         }
 
+        //Método para buscar um usuário pelo seu id
         public Usuarios getById(string id)
         {
             using (GoiabinhaContext Ctx = new GoiabinhaContext())
@@ -39,6 +41,7 @@ namespace Goiabinha_API_Core.Repositories
             }
         }
 
+        //Método para cadastrar um novo usuário
         public void post(Usuarios Usuario)
         {
             using (GoiabinhaContext Ctx = new GoiabinhaContext())
@@ -53,6 +56,7 @@ namespace Goiabinha_API_Core.Repositories
             }
         }
 
+        //Método para atualizar um usuário existente
         public void update(string id, Usuarios NewUsuario)
         {
             using (GoiabinhaContext Ctx = new GoiabinhaContext())

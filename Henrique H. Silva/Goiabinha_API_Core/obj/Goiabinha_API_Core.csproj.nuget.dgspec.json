@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\henri\\Desktop\\goiabeira\\Goiabinha_API_Core\\Goiabinha_API_Core.csproj": {}
+    "C:\\Users\\henri\\Desktop\\goiabeira-1\\Henrique H. Silva\\Goiabinha_API_Core\\Goiabinha_API_Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\henri\\Desktop\\goiabeira\\Goiabinha_API_Core\\Goiabinha_API_Core.csproj": {
+    "C:\\Users\\henri\\Desktop\\goiabeira-1\\Henrique H. Silva\\Goiabinha_API_Core\\Goiabinha_API_Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\henri\\Desktop\\goiabeira\\Goiabinha_API_Core\\Goiabinha_API_Core.csproj",
+        "projectUniqueName": "C:\\Users\\henri\\Desktop\\goiabeira-1\\Henrique H. Silva\\Goiabinha_API_Core\\Goiabinha_API_Core.csproj",
         "projectName": "Goiabinha_API_Core",
-        "projectPath": "C:\\Users\\henri\\Desktop\\goiabeira\\Goiabinha_API_Core\\Goiabinha_API_Core.csproj",
+        "projectPath": "C:\\Users\\henri\\Desktop\\goiabeira-1\\Henrique H. Silva\\Goiabinha_API_Core\\Goiabinha_API_Core.csproj",
         "packagesPath": "C:\\Users\\henri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\henri\\Desktop\\goiabeira\\Goiabinha_API_Core\\obj\\",
+        "outputPath": "C:\\Users\\henri\\Desktop\\goiabeira-1\\Henrique H. Silva\\Goiabinha_API_Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

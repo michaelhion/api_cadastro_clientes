@@ -1,4 +1,5 @@
 ﻿using System;
+using Goiabinha_API_Core.Context;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Goiabinha_API_Core.Migrations

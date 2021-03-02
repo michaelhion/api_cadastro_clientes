@@ -1,4 +1,5 @@
-﻿using Goiabinha_API_Core.Models;
+﻿using Goiabinha_API_Core.Migrations;
+using Goiabinha_API_Core.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace Goiabinha_API_Core.Context
     {
         public GoiabinhaContext()
         {
+            InitialCreate initialCreate = new InitialCreate();
         }
 
         public GoiabinhaContext(DbContextOptions<GoiabinhaContext> options)
@@ -24,7 +26,7 @@ namespace Goiabinha_API_Core.Context
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=localhost, 1433;Database=DbUsuarios;User=sa;Password=12as$goia!;");
+                optionsBuilder.UseSqlServer("Server=db;Database=DbUsuarios;User=sa;Password=Goiabeira007;");
             }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

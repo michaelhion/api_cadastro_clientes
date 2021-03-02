@@ -8,6 +8,7 @@ using Goiabinha_API_Core.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Goiabinha_API_Core
@@ -34,10 +35,13 @@ namespace Goiabinha_API_Core
             {
                 app.UseDeveloperExceptionPage();
             }
+            //Criar banco de dados caso não exista.
+            using (var context = new GoiabinhaContext())
+            {
+                context.Database.Migrate();
+            }
 
             app.UseMvc();
-
-            AutomaticallyDb.population(app);
         }
     }
 }
