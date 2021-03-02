@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  mysql:
+    build: ./sql
+    ports:
+      - 3306:3306
+  api:
+    build: ./api-cadastro
+    ports:
+      - 5001:5001
+    depends_on: 
+      - mysql
