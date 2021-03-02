@@ -1,0 +1,18 @@
+﻿version: "3.9"  # optional since v1.27.0
+services:
+  intelitrader-api:
+    build: ./
+    ports:
+    - "8080:80"
+  sql-server-db:
+    container_name: sql-server-db
+    image: microsoft/mssql-server-windows-express:latest
+    environment:
+        ACCEPT_EULA: "Y"
+        SA_PASSWORD: "Pa55word2019"
+        MSSQL_PID: Express
+    ports:
+      - "1433:1433"
+
+
+

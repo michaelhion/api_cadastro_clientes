@@ -5,6 +5,8 @@ using Api_intelitrader.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Api_intelitrader.Repository
@@ -46,6 +48,7 @@ namespace Api_intelitrader.Repository
 
         public void Cadastrar(Entidade novaEntidade)
         {
+
             ctx.Entidades.Add(novaEntidade);
 
             ctx.SaveChanges();

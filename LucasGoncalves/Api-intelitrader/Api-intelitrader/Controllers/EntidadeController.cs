@@ -21,12 +21,14 @@ namespace Api_intelitrader.Controllers
         }
 
         [HttpGet]
+       
         public IActionResult Get()
         {
             return Ok(_entidadeRepository.Listar());
         }
 
-        [HttpGet]
+      
+        [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
             try
@@ -60,7 +62,7 @@ namespace Api_intelitrader.Controllers
             }
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             try
@@ -83,7 +85,7 @@ namespace Api_intelitrader.Controllers
             }
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]  
         public IActionResult Put(int id, Entidade entidadeAtualizada)
         {
             try

@@ -2,6 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Api_intelitrader.Domains;
+using System.Security.Cryptography;
+using System.Text;
 
 #nullable disable
 
@@ -25,7 +27,7 @@ namespace Api_intelitrader.Contexts
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-AMSIKG3\\SQLEXPRESS; Initial Catalog=api_intelitrader;integrated security=true;");
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-AMSIKG3\\SQLEXPRESS; Initial Catalog=api_intelitrader;user=sa;password=Pa55word2019");
             }
         }
 
@@ -37,9 +39,8 @@ namespace Api_intelitrader.Contexts
             {
                 entity.ToTable("Entidade");
 
-                entity.Property(e => e.Id)
-                    .HasMaxLength(20)
-                    .IsUnicode(false);
+
+                entity.HasKey(e => e.Id);
 
                 entity.Property(e => e.Age).HasColumnName("age");
 
@@ -49,7 +50,7 @@ namespace Api_intelitrader.Contexts
                     .HasDefaultValueSql("(getdate())");
 
                 entity.Property(e => e.FirstName)
-                    .IsRequired()
+                    .IsRequired(true)
                     .HasMaxLength(20)
                     .IsUnicode(false)
                     .HasColumnName("firstName");
@@ -58,7 +59,8 @@ namespace Api_intelitrader.Contexts
                     .IsRequired()
                     .HasMaxLength(20)
                     .IsUnicode(false)
-                    .HasColumnName("surName");
+                    .HasColumnName("surName")
+                    .IsRequired(false);
             });
 
             OnModelCreatingPartial(modelBuilder);
