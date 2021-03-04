@@ -1,18 +1,12 @@
-using api_cadastro.UserData;
+using api_cadastro.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.OpenApi.Models;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 
 namespace api_cadastro
 {
@@ -28,8 +22,11 @@ namespace api_cadastro
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var connection = Configuration["ConnectionStrings:Mysql"];
+            services.AddDbContext<AppDbContext>(options =>
+                options.UseMySql(connection, new MySqlServerVersion(new Version(8, 0, 23)), mySqlOptions => mySqlOptions.CharSetBehavior(CharSetBehavior.NeverAppend))
+            );
             services.AddControllers();
-            services.AddSingleton<IUserData, MockUserData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

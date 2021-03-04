@@ -8,6 +8,6 @@ services:
   api:
     build: ./api-cadastro
     ports:
-      - 5001:5001
+      - 5000:5000
     depends_on: 
       - mysql
