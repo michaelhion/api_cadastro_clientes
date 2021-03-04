@@ -1,7 +1,7 @@
 version: "3.9"
 services:
     webapi:
-        build: ./Goiabinha_API_Core/
+        build: ./Goiabeira_WebApi/
         ports:
             - "8000:80"
         depends_on:

@@ -4,14 +4,14 @@
     "C:\\Users\\henri\\Desktop\\goiabeira-1\\Henrique H. Silva\\XUnitTest_Goiabeira\\XUnitTest_Goiabeira.csproj": {}
   },
   "projects": {
-    "C:\\Users\\henri\\Desktop\\goiabeira-1\\Henrique H. Silva\\Goiabinha_API_Core\\Goiabinha_API_Core.csproj": {
+    "C:\\Users\\henri\\Desktop\\goiabeira-1\\Henrique H. Silva\\Goiabeira_WebApi\\Goiabeira_WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\henri\\Desktop\\goiabeira-1\\Henrique H. Silva\\Goiabinha_API_Core\\Goiabinha_API_Core.csproj",
-        "projectName": "Goiabinha_API_Core",
-        "projectPath": "C:\\Users\\henri\\Desktop\\goiabeira-1\\Henrique H. Silva\\Goiabinha_API_Core\\Goiabinha_API_Core.csproj",
+        "projectUniqueName": "C:\\Users\\henri\\Desktop\\goiabeira-1\\Henrique H. Silva\\Goiabeira_WebApi\\Goiabeira_WebApi.csproj",
+        "projectName": "Goiabeira_WebApi",
+        "projectPath": "C:\\Users\\henri\\Desktop\\goiabeira-1\\Henrique H. Silva\\Goiabeira_WebApi\\Goiabeira_WebApi.csproj",
         "packagesPath": "C:\\Users\\henri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\henri\\Desktop\\goiabeira-1\\Henrique H. Silva\\Goiabinha_API_Core\\obj\\",
+        "outputPath": "C:\\Users\\henri\\Desktop\\goiabeira-1\\Henrique H. Silva\\Goiabeira_WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -23,14 +23,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.1"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.1": {
+          "netcoreapp3.1": {
             "projectReferences": {}
           }
         },
@@ -41,42 +41,27 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.1": {
+        "netcoreapp3.1": {
           "dependencies": {
-            "Microsoft.AspNetCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.1.1, )",
-              "autoReferenced": true
-            },
-            "Microsoft.AspNetCore.Razor.Design": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.1.2, )"
-            },
             "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[2.1.14, )"
+              "version": "[5.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[2.1.14, )"
+              "version": "[5.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[1.1.2, )"
+              "version": "[5.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.1.14, )"
-            },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.1.0, )",
-              "autoReferenced": true
+              "version": "[5.0.0, )"
             },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
@@ -84,7 +69,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[2.1.10, )"
+              "version": "[3.1.5, )"
             }
           },
           "imports": [
@@ -97,6 +82,14 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
@@ -129,8 +122,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\henri\\Desktop\\goiabeira-1\\Henrique H. Silva\\Goiabinha_API_Core\\Goiabinha_API_Core.csproj": {
-                "projectPath": "C:\\Users\\henri\\Desktop\\goiabeira-1\\Henrique H. Silva\\Goiabinha_API_Core\\Goiabinha_API_Core.csproj"
+              "C:\\Users\\henri\\Desktop\\goiabeira-1\\Henrique H. Silva\\Goiabeira_WebApi\\Goiabeira_WebApi.csproj": {
+                "projectPath": "C:\\Users\\henri\\Desktop\\goiabeira-1\\Henrique H. Silva\\Goiabeira_WebApi\\Goiabeira_WebApi.csproj"
               }
             }
           }
@@ -144,9 +137,13 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Microsoft.AspNetCore.Mvc.Testing": {
+            "Microsoft.AspNetCore.Hosting": {
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[2.2.7, )"
+            },
+            "Microsoft.AspNetCore.TestHost": {
+              "target": "Package",
+              "version": "[3.0.0, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
