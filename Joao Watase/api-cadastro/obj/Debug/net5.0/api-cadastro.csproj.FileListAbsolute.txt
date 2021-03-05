@@ -27,7 +27,6 @@ C:\Users\watas\Desktop\api-cadastro\api-cadastro\api-cadastro\obj\Debug\net5.0\a
 C:\Users\watas\Desktop\api-cadastro\api-cadastro\api-cadastro\obj\Debug\net5.0\ref\api-cadastro.dll
 C:\Users\watas\Desktop\api-cadastro\api-cadastro\api-cadastro\obj\Debug\net5.0\api-cadastro.pdb
 C:\Users\watas\Desktop\api-cadastro\api-cadastro\api-cadastro\obj\Debug\net5.0\api-cadastro.genruntimeconfig.cache
-C:\Users\watas\Desktop\api-cadastro\Joao Watase\api-cadastro\obj\Debug\net5.0\api-cadastro.csprojAssemblyReference.cache
 C:\Users\watas\Desktop\api-cadastro\Joao Watase\api-cadastro\obj\Debug\net5.0\api-cadastro.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\watas\Desktop\api-cadastro\Joao Watase\api-cadastro\obj\Debug\net5.0\api-cadastro.AssemblyInfoInputs.cache
 C:\Users\watas\Desktop\api-cadastro\Joao Watase\api-cadastro\obj\Debug\net5.0\api-cadastro.AssemblyInfo.cs

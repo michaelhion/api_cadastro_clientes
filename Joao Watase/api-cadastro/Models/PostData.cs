@@ -9,13 +9,12 @@ namespace api_cadastro.Models
     {
         public PostData(string name, int age, string surname = null)
         {
-            this.name = name;
-            this.age = age;
-            this.surname = surname;
+            Name = name;
+            Age = age;
+            Surname = surname;
         }
-
-        public string name { get; set; }
-        public int age { get; set; }
-        public string surname { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string Surname { get; set; }
     }
 }

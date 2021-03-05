@@ -1,15 +1,8 @@
-﻿
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Cors;
 using api_cadastro.Models;
-using Microsoft.EntityFrameworkCore;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+using Microsoft.Extensions.Logging;
 
 namespace api_cadastro.Controllers
 {
@@ -18,54 +11,65 @@ namespace api_cadastro.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
+        ILogger _logger;
         private AppDbContext _context;
-        public UsersController(AppDbContext context)
+        public UsersController(AppDbContext context, ILogger<UsersController> logger)
         {
             _context = context;
+            _logger = logger;
         }
         [HttpGet]
         [Route("/[controller]")]
         public IActionResult GetUsers()
         {
+            _logger.LogInformation("GET /Users");
             return Ok(_context.Users);
         }
-
         [HttpGet]
         [Route("/[controller]/{id}")]
         public IActionResult GetUser(string id)
         {
+            _logger.LogInformation($"GET /Users/{id}");
             var user = _context.Users.FirstOrDefault(x => x.Id == id);
             if (user != null)
             {
                 return Ok(user);
             }
+            _logger.LogInformation($"User with id '{id}' not found");
             return NotFound("User not found");
         }
         [HttpPost]
         [Route("/[controller]")]
-        public string AddUser(PostData dados)
+        public IActionResult AddUser(PostData dados)
         {
-            _context.Users.Add(new User(dados.name, dados.age, dados.surname));
+            _logger.LogInformation("POST /Users");
+            _context.Users.Add(new User(dados.Name, dados.Age, dados.Surname));
             _context.SaveChanges();
-            return "user added";
+            _logger.LogInformation("User added");
+            return Ok("User added");
         }
         [HttpDelete]
         [Route("/[controller]/{id}")]
-        public void DelUser(string id)
+        public IActionResult DelUser(string id)
         {
+            _logger.LogInformation($"DELETE /Users/{id}");
             User usertodelete = _context.Users.FirstOrDefault(x => x.Id == id);
-            if (User != null)
+            if (usertodelete != null)
             {
                 _context.Users.Remove(usertodelete);
                 _context.SaveChanges();
+                _logger.LogInformation("User deleted");
+                return Ok("User deleted");
             }
+            return NotFound("User not found");
         }
         [HttpPut]
         [Route("/[controller]/{id}")]
-        public void EditUser(PostData dados, string id)
+        public IActionResult EditUser(PostData dados, string id)
         {
+            _logger.LogInformation($"PUT /Users/{id}");
             User usertoedit = _context.Users.FirstOrDefault(x => x.Id == id);
-            User edited = new User(dados.name, dados.age, dados.surname)
+            User edited = new User(dados.Name, dados.Age, dados.Surname)
             {
                 Id = usertoedit.Id,
                 CreationDate = usertoedit.CreationDate
@@ -75,7 +79,10 @@ namespace api_cadastro.Controllers
                 _context.Users.Remove(usertoedit);
                 _context.Users.Add(edited);
                 _context.SaveChanges();
+                _logger.LogInformation("Changes saved");
+                return Ok("User edited");
             }
+            return NotFound("User not found.");
         }
     }
 }

@@ -24,7 +24,7 @@ namespace api_cadastro
         {
             var connection = Configuration["ConnectionStrings:Mysql"];
             services.AddDbContext<AppDbContext>(options =>
-                options.UseMySql(connection, new MySqlServerVersion(new Version(8, 0, 23)), mySqlOptions => mySqlOptions.CharSetBehavior(CharSetBehavior.NeverAppend))
+                options.UseMySql(connection, new MySqlServerVersion(new Version(8, 0, 23)), mySqlOptions => mySqlOptions.CharSetBehavior(CharSetBehavior.NeverAppend).EnableRetryOnFailure())
             );
             services.AddControllers();
         }
