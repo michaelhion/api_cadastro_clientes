@@ -1,14 +1,13 @@
-using Goiabeira_WebApi;
-using Goiabeira_WebApi.Context;
+ï»¿using Goiabinha_WebApi;
+using Goiabinha_WebApi.Context;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.TestHost;
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Net.Http;
-using System.Text;
 using System.Text.Json;
+using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -26,7 +25,7 @@ namespace XUnitTest_Goiabeira
             _client = _server.CreateClient();
         }
 
-        //Teste para retornar Not Found por ter nenhum usuário cadastrado
+        //Teste para retornar Not Found por ter nenhum usuï¿½rio cadastrado
         [Fact, TestPriority(1)]
         public async Task Get_Return_Not_Found()
         {
@@ -36,7 +35,7 @@ namespace XUnitTest_Goiabeira
             Assert.Equal("Not Found", response.ReasonPhrase.ToString());
         }
 
-        //Teste para cadastrar novo usuário
+        //Teste para cadastrar novo usuï¿½rio
         [Fact, TestPriority(2)]
         public async Task Post_Return_Created_Create_user()
         {
@@ -56,7 +55,7 @@ namespace XUnitTest_Goiabeira
             Assert.Equal("Created", response.ReasonPhrase.ToString());
         }
 
-        //Teste para retornar lista de usuários 
+        //Teste para retornar lista de usuï¿½rios 
         [Fact, TestPriority(3)]
         public async Task Get_Return_OK_List_Users()
         {
@@ -67,7 +66,7 @@ namespace XUnitTest_Goiabeira
             Assert.Equal("OK", responseString);
         }
 
-        //Teste para atualizar um usuário
+        //Teste para atualizar um usuï¿½rio
         [Fact, TestPriority(4)]
         public async Task Put_Return_Accepted_Update_Name()
         {
@@ -86,7 +85,7 @@ namespace XUnitTest_Goiabeira
             Assert.Equal("Accepted", response.ReasonPhrase.ToString());
         }
 
-        //Teste para buscar um usuário pelo id
+        //Teste para buscar um usuï¿½rio pelo id
         [Fact, TestPriority(5)]
         public async Task Get_Return_OK_And_User()
         {
@@ -99,7 +98,7 @@ namespace XUnitTest_Goiabeira
             Assert.Equal("OK", response.ReasonPhrase.ToString());
         }
 
-        //Teste para dar um erro por o id está errado.
+        //Teste para dar um erro por o id estï¿½ errado.
         [Fact, TestPriority(6)]
         public async Task Delete_Return_Forbidden_Id_Invalid()
         {
@@ -107,7 +106,7 @@ namespace XUnitTest_Goiabeira
             Assert.Equal("Forbidden", response.ReasonPhrase.ToString());
         }
 
-        //Teste para deletar um usuário.
+        //Teste para deletar um usuï¿½rio.
         [Fact, TestPriority(7)]
         public async Task Delete_Return_Accepted()
         {
@@ -121,7 +120,7 @@ namespace XUnitTest_Goiabeira
         }
 
 
-        //Teste para dar um erro na hora de cadastrar um usuário por está com nome vazio.
+        //Teste para dar um erro na hora de cadastrar um usuï¿½rio por estï¿½ com nome vazio.
         [Fact, TestPriority(8)]
         public async Task Post_Return_Bad_Rquest_Name_Invalid()
         {
@@ -141,7 +140,7 @@ namespace XUnitTest_Goiabeira
             Assert.Equal("Bad Request", response.ReasonPhrase.ToString());
         }
 
-        //Teste para dar erro, por id está errado na hora de atualizar
+        //Teste para dar erro, por id estï¿½ errado na hora de atualizar
         [Fact, TestPriority(9)]
         public async Task Put_Return_BadRequest_Id_Invalid()
         {
@@ -162,7 +161,7 @@ namespace XUnitTest_Goiabeira
             Assert.Equal("Bad Request", response.ReasonPhrase.ToString());
         }
 
-        //Teste para dar erro, por id está errado.
+        //Teste para dar erro, por id estï¿½ errado.
         [Fact, TestPriority(10)]
         public async Task Get_Return_BadRequest_Id_Invalid()
         {
