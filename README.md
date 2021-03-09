@@ -1,6 +1,6 @@
 # Como realizar os testes
 
-##ApiLite
+## ApiLite
 
 1- Faça um git clone do repositorio. 
 2- Abra a pasta Lucas Gonçalves > ApiLite > digite CMD na barra do diretorio.
@@ -9,7 +9,7 @@
 5- Caso tenha algum erro, Aperte CTRL + C e digite o "docker-compose up" novamente.
 
 
-##Teste unitario
+## Teste unitario
 1- Abra a pasta Lucas Goncalves > Abra o projeto. 
 2- Abra o arquivo Startup.cs e troque a connection string. 
 3- Abra EntityDbContext e troque a connection string.
