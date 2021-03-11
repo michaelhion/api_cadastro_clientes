@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lucas\\source\\repos\\ApiLite\\XUnitTestProject\\XUnitTestProject.csproj": {}
+    "C:\\Users\\Lucas\\Desktop\\Intelitrader\\goiabeira\\LucasGoncalves\\ApiLite\\XUnitTestProject\\XUnitTestProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lucas\\source\\repos\\ApiLite\\ApiLite\\ApiLite.csproj": {
+    "C:\\Users\\Lucas\\Desktop\\Intelitrader\\goiabeira\\LucasGoncalves\\ApiLite\\ApiLite\\ApiLite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucas\\source\\repos\\ApiLite\\ApiLite\\ApiLite.csproj",
+        "projectUniqueName": "C:\\Users\\Lucas\\Desktop\\Intelitrader\\goiabeira\\LucasGoncalves\\ApiLite\\ApiLite\\ApiLite.csproj",
         "projectName": "ApiLite",
-        "projectPath": "C:\\Users\\Lucas\\source\\repos\\ApiLite\\ApiLite\\ApiLite.csproj",
+        "projectPath": "C:\\Users\\Lucas\\Desktop\\Intelitrader\\goiabeira\\LucasGoncalves\\ApiLite\\ApiLite\\ApiLite.csproj",
         "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucas\\source\\repos\\ApiLite\\ApiLite\\obj\\",
+        "outputPath": "C:\\Users\\Lucas\\Desktop\\Intelitrader\\goiabeira\\LucasGoncalves\\ApiLite\\ApiLite\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -78,6 +78,10 @@
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.10.9, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[5.0.1, )"
             }
           },
           "imports": [
@@ -94,14 +98,14 @@
         }
       }
     },
-    "C:\\Users\\Lucas\\source\\repos\\ApiLite\\XUnitTestProject\\XUnitTestProject.csproj": {
+    "C:\\Users\\Lucas\\Desktop\\Intelitrader\\goiabeira\\LucasGoncalves\\ApiLite\\XUnitTestProject\\XUnitTestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucas\\source\\repos\\ApiLite\\XUnitTestProject\\XUnitTestProject.csproj",
+        "projectUniqueName": "C:\\Users\\Lucas\\Desktop\\Intelitrader\\goiabeira\\LucasGoncalves\\ApiLite\\XUnitTestProject\\XUnitTestProject.csproj",
         "projectName": "XUnitTestProject",
-        "projectPath": "C:\\Users\\Lucas\\source\\repos\\ApiLite\\XUnitTestProject\\XUnitTestProject.csproj",
+        "projectPath": "C:\\Users\\Lucas\\Desktop\\Intelitrader\\goiabeira\\LucasGoncalves\\ApiLite\\XUnitTestProject\\XUnitTestProject.csproj",
         "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucas\\source\\repos\\ApiLite\\XUnitTestProject\\obj\\",
+        "outputPath": "C:\\Users\\Lucas\\Desktop\\Intelitrader\\goiabeira\\LucasGoncalves\\ApiLite\\XUnitTestProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -118,8 +122,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Lucas\\source\\repos\\ApiLite\\ApiLite\\ApiLite.csproj": {
-                "projectPath": "C:\\Users\\Lucas\\source\\repos\\ApiLite\\ApiLite\\ApiLite.csproj"
+              "C:\\Users\\Lucas\\Desktop\\Intelitrader\\goiabeira\\LucasGoncalves\\ApiLite\\ApiLite\\ApiLite.csproj": {
+                "projectPath": "C:\\Users\\Lucas\\Desktop\\Intelitrader\\goiabeira\\LucasGoncalves\\ApiLite\\ApiLite\\ApiLite.csproj"
               }
             }
           }
@@ -161,6 +165,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[5.0.1, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

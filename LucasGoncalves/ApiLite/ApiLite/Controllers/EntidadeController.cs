@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace ApiLite.Controllers
@@ -24,7 +25,6 @@ namespace ApiLite.Controllers
 
             _logger = logger;
         }
-
 
         /// <summary>
         /// Lista os usuarios
@@ -59,7 +59,12 @@ namespace ApiLite.Controllers
         [HttpPost]
         public async Task<IActionResult> Post (Entidade entidade)
         {
+
             _logger.LogInformation("Adding an usuario");
+
+            entidade.Id = Guid.NewGuid().ToString();
+            entidade.CreationDate = DateTime.Now;
+
             _entidadeContext.Entidades.Add(entidade);
 
             await _entidadeContext.SaveChangesAsync();
@@ -101,11 +106,12 @@ namespace ApiLite.Controllers
         public async Task<IActionResult> Delete(string id)
         {
             _logger.LogInformation("Deleting an usuario by id");
+
             var ent = await _entidadeContext.Entidades.FirstOrDefaultAsync(x => x.Id == id);
 
             _entidadeContext.Remove(ent);
 
-            var success = (await _entidadeContext.SaveChangesAsync());
+            var success =  (await _entidadeContext.SaveChangesAsync());
 
             return new JsonResult(success);
 

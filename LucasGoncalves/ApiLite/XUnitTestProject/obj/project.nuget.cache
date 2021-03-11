@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vc7awvirsN+sFfhd8D6SJx1jmqKmkNrZDiJWyo8N8S1+/Ddn7pUqOhYW7/QvpqMn6fPHkT4bIXS+IN8eljfH0A==",
+  "dgSpecHash": "y3uZSjYz/5Pm4U0qsye0L6ONelz35ireLNIYL2RDVu6LOkuiDYpxy8NdhGME3atlGxvbiMlizqAJShM8amxk8Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lucas\\source\\repos\\ApiLite\\XUnitTestProject\\XUnitTestProject.csproj",
+  "projectFilePath": "C:\\Users\\Lucas\\Desktop\\Intelitrader\\goiabeira\\LucasGoncalves\\ApiLite\\XUnitTestProject\\XUnitTestProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lucas\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
@@ -191,6 +191,7 @@
     "C:\\Users\\Lucas\\.nuget\\packages\\system.text.encoding.codepages\\4.5.0\\system.text.encoding.codepages.4.5.0.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\system.text.encoding.extensions\\4.3.0\\system.text.encoding.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
+    "C:\\Users\\Lucas\\.nuget\\packages\\system.text.json\\5.0.1\\system.text.json.5.0.1.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\system.text.regularexpressions\\4.3.0\\system.text.regularexpressions.4.3.0.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",

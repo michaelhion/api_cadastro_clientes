@@ -1,11 +1,7 @@
 using ApiLite;
-using ApiLite.Controllers;
 using ApiLite.Models;
-using IntelitraderAPI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
-using Microsoft.Extensions.Logging;
-using Moq;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -35,7 +31,7 @@ namespace XUnitTestProject
         [Fact]
         public async Task Values_Post_ReturnCreatedResponse()
         {
-            var response = await _client.PostAsync("/api/Entidade", new StringContent(JsonConvert.SerializeObject(
+            var response = await _client.PostAsync("/api/Entidade", new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(
                 new Entidade()
                 { FirstName = "Lucas", SurName = "Goncalves", Age = 17, CreationDate = DateTime.Now }), Encoding.UTF8, "application/json"));
 
@@ -61,47 +57,43 @@ namespace XUnitTestProject
 
             var newEntidade = System.Text.Json.JsonSerializer.Deserialize<List<Entidade>>(response);
 
-
             var responseId = await _client.GetAsync(requestUri: $"/api/entidade/{newEntidade[0].Id}");
 
             Assert.Equal(HttpStatusCode.OK, responseId.StatusCode);
 
         }
 
-        //Erro ao tentar deletar 
-        //[Fact]
-        //public async Task Values_Delete_ReturnOKResponse()
-        //{
+        [Fact]
+        public async Task values_delete_returNotFound()
+        {
 
-        //    var request = await _client.GetAsync(requestUri: "/api/Entidade");
-        //    var response = request.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+            var request = await _client.GetAsync(requestUri: "/api/entidade");
+            var responseGet = request.Content.ReadAsStringAsync().GetAwaiter().GetResult();
 
-        //    var newEntidade = System.Text.Json.JsonSerializer.Deserialize<List<Entidade>>(response);
+            var newEntidade = JsonConvert.DeserializeObject<List<Entidade>>(responseGet);
 
 
-        //    var responseId = await _client.DeleteAsync(requestUri: $"/api/entidade/{newEntidade[0].Id}");
+            var test = await _client.DeleteAsync(requestUri: $"/api/entidade/{newEntidade[0].Id}");
 
-        //    Assert.Equal(HttpStatusCode.Accepted, responseId.StatusCode);
+            Assert.Equal(HttpStatusCode.OK, test.StatusCode);
 
-        //}
+        }
 
-        
-        //[Fact]
-        //public async Task Value_Put_ReturnUpdatedResponse()
-        //{
-        //    var request = await _client.GetAsync(requestUri: "/api/Entidade");
-        //    var response = request.Content.ReadAsStringAsync().GetAwaiter().GetResult();
 
-        //    var newEntidade = System.Text.Json.JsonSerializer.Deserialize<List<Entidade>>(response);
+        [Fact]
+        public async Task Value_Put_ReturnOkResponse()
+        {
+            var request = await _client.GetAsync(requestUri: "/api/Entidade");
+            var response = request.Content.ReadAsStringAsync().GetAwaiter().GetResult();
 
-        //    string collectionResult = System.Text.Json.JsonSerializer.Serialize(newEntidade[0], options);
+            var newEntidade = JsonConvert.DeserializeObject<List<Entidade>>(response);
 
-        //    var push = new StringContent(collectionResult, Encoding.UTF8, "application/json");
+            var putActiong = await _client.PutAsync(requestUri: $"/api/entidade/{newEntidade[0].Id}", new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(
+                new Entidade()
+                { FirstName = "Lucas", SurName = "Goncalves", Age = 17, CreationDate = DateTime.Now }), Encoding.UTF8, "application/json"));
 
-        //    var putActiong = await _client.PutAsync(requestUri: $"/api/entidade/{newEntidade[0].Id}", push);
-
-        //    Assert.Equal(HttpStatusCode.NoContent, putActiong.StatusCode);
-        //}
+            Assert.Equal(HttpStatusCode.OK, putActiong.StatusCode);
+        }
 
 
     }
