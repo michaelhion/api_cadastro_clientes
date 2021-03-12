@@ -32,6 +32,10 @@ namespace Goiabeira_Xamarin_Mobile
 
             if (response == "Created")
             {
+                Txtname.Text = string.Empty;
+                TxtSurname.Text = string.Empty;
+                TxtAge.Text = string.Empty;
+
                 await DisplayAlert("Sucesso","Usuários criado com sucesso.","OK");
             }
             else if(response == "Bad Request")

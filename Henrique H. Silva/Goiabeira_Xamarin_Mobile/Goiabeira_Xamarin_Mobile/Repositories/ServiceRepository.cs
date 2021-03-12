@@ -14,12 +14,19 @@ namespace Goiabeira_Xamarin_Mobile.Repositories
         {
             using (var client = new HttpClient())
             {
-                Uri uri = new Uri(string.Format("http://IP_V4:8000/api/Usuario"));
-                var content = new StringContent(JsonConvert.SerializeObject(NovoUsuario), Encoding.UTF8, "application/json");
+                try
+                {
+                    Uri uri = new Uri(string.Format("http://IPV4_ADDRESS:8000/api/Usuario"));
+                    var content = new StringContent(JsonConvert.SerializeObject(NovoUsuario), Encoding.UTF8, "application/json");
                 
-                HttpResponseMessage response = await client.PostAsync(uri, content);
+                    HttpResponseMessage response = await client.PostAsync(uri, content);
 
-                return response.ReasonPhrase;    
+                    return response.ReasonPhrase;    
+                }
+                catch (Exception)
+                {
+                    return "Bad Request";
+                }
             }
         }
     }
