@@ -3,9 +3,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace IntelitraderAPI
 {
@@ -31,10 +29,10 @@ namespace IntelitraderAPI
                 //Adiciona uma tabela ao banco criado
                 System.Console.WriteLine("Adicionando data - seeding...");
                 context.Entidades.AddRange(
-                    new Entidade() {  FirstName = "Nome", SurName = "Sobrenome", Age = 25, CreationDate = DateTime.Now }
+                    new Entidade() { FirstName = "Nome", SurName = "Sobrenome", Age = 25, CreationDate = DateTime.Now }
                 );
 
-                
+
                 context.SaveChanges();
             }
             else

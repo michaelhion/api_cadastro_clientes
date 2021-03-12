@@ -1,6 +1,4 @@
-﻿using ApiLite;
-using ApiLite.Migrations;
-using ApiLite.Models;
+﻿using ApiLite.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace IntelitraderAPI
@@ -10,7 +8,7 @@ namespace IntelitraderAPI
 
         public EntityDbContext(DbContextOptions<EntityDbContext> options) : base(options)
         {
-            
+
         }
 
         public DbSet<Entidade> Entidades { get; set; }

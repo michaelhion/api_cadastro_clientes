@@ -5,8 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace ApiLite.Controllers
@@ -14,7 +12,7 @@ namespace ApiLite.Controllers
     [ApiController]
     [Route("api/[controller]")]
     [Produces("application/json")]
-    public class EntidadeController 
+    public class EntidadeController
     {
         private readonly EntityDbContext _entidadeContext;
         private readonly ILogger<EntidadeController> _logger;
@@ -57,7 +55,7 @@ namespace ApiLite.Controllers
         /// </summary>
         /// <param name="entidade"></param>
         [HttpPost]
-        public async Task<IActionResult> Post (Entidade entidade)
+        public async Task<IActionResult> Post(Entidade entidade)
         {
 
             _logger.LogInformation("Adding an usuario");
@@ -111,7 +109,7 @@ namespace ApiLite.Controllers
 
             _entidadeContext.Remove(ent);
 
-            var success =  (await _entidadeContext.SaveChangesAsync());
+            var success = (await _entidadeContext.SaveChangesAsync());
 
             return new JsonResult(success);
 
@@ -119,6 +117,6 @@ namespace ApiLite.Controllers
 
 
 
-   
+
     }
 }
