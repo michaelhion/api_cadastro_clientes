@@ -1,0 +1,13 @@
+C:\Users\henri\Desktop\goiabeira-1\Henrique H. Silva\Goiabeira_Xamarin_Mobile\Goiabeira_Xamarin_Mobile\bin\Debug\netstandard2.0\Goiabeira_Xamarin_Mobile.deps.json
+C:\Users\henri\Desktop\goiabeira-1\Henrique H. Silva\Goiabeira_Xamarin_Mobile\Goiabeira_Xamarin_Mobile\bin\Debug\netstandard2.0\Goiabeira_Xamarin_Mobile.dll
+C:\Users\henri\Desktop\goiabeira-1\Henrique H. Silva\Goiabeira_Xamarin_Mobile\Goiabeira_Xamarin_Mobile\bin\Debug\netstandard2.0\ref\Goiabeira_Xamarin_Mobile.dll
+C:\Users\henri\Desktop\goiabeira-1\Henrique H. Silva\Goiabeira_Xamarin_Mobile\Goiabeira_Xamarin_Mobile\bin\Debug\netstandard2.0\Goiabeira_Xamarin_Mobile.pdb
+C:\Users\henri\Desktop\goiabeira-1\Henrique H. Silva\Goiabeira_Xamarin_Mobile\Goiabeira_Xamarin_Mobile\obj\Debug\netstandard2.0\Goiabeira_Xamarin_Mobile.csprojAssemblyReference.cache
+C:\Users\henri\Desktop\goiabeira-1\Henrique H. Silva\Goiabeira_Xamarin_Mobile\Goiabeira_Xamarin_Mobile\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\henri\Desktop\goiabeira-1\Henrique H. Silva\Goiabeira_Xamarin_Mobile\Goiabeira_Xamarin_Mobile\obj\Debug\netstandard2.0\Cadastro.xaml.g.cs
+C:\Users\henri\Desktop\goiabeira-1\Henrique H. Silva\Goiabeira_Xamarin_Mobile\Goiabeira_Xamarin_Mobile\obj\Debug\netstandard2.0\Goiabeira_Xamarin_Mobile.AssemblyInfoInputs.cache
+C:\Users\henri\Desktop\goiabeira-1\Henrique H. Silva\Goiabeira_Xamarin_Mobile\Goiabeira_Xamarin_Mobile\obj\Debug\netstandard2.0\Goiabeira_Xamarin_Mobile.AssemblyInfo.cs
+C:\Users\henri\Desktop\goiabeira-1\Henrique H. Silva\Goiabeira_Xamarin_Mobile\Goiabeira_Xamarin_Mobile\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\henri\Desktop\goiabeira-1\Henrique H. Silva\Goiabeira_Xamarin_Mobile\Goiabeira_Xamarin_Mobile\obj\Debug\netstandard2.0\Goiabeira_Xamarin_Mobile.dll
+C:\Users\henri\Desktop\goiabeira-1\Henrique H. Silva\Goiabeira_Xamarin_Mobile\Goiabeira_Xamarin_Mobile\obj\Debug\netstandard2.0\ref\Goiabeira_Xamarin_Mobile.dll
+C:\Users\henri\Desktop\goiabeira-1\Henrique H. Silva\Goiabeira_Xamarin_Mobile\Goiabeira_Xamarin_Mobile\obj\Debug\netstandard2.0\Goiabeira_Xamarin_Mobile.pdb
