@@ -7,3 +7,5 @@
 - 3 - Como consegui o IPV4, acesse o Prompt de comando da sua máquina e digite ipconfig partir daí você conseguiram o seu IPV4.
 
 - 4 - Após isso tudo estará rodado. 
+
+- 5 - Caso de algum erro ao conectar na WebApi, Habilitei o Docker no seu firewall para receber entreadas porta 8000.
