@@ -19,12 +19,19 @@ namespace api_cadastro_cliente
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public IConfiguration Configuration { get; set; }
+        public Startup(IHostingEnvironment env)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+           Configuration = builder.Build();
         }
+        //public Startup(IConfiguration configuration)
+        //{
+        //    Configuration = configuration;
+        //}
 
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -38,20 +45,29 @@ namespace api_cadastro_cliente
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddTransient<IClientes, ClienteRepository>();
 
-            //var connection = @"Server=db;Database=master;User=sa;Password=bQ7gE5tL@@xm9WTa;";
+            services.AddDbContext<Contexto>(o => o.UseSqlServer(Configuration.GetSection("connection2").Value));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, Contexto db)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+            }
 
-            using (var context = new ClienteContexto())
+            //db.Database.EnsureCreated();
+
+            if (Configuration["FazerMIgration"]== "True")
+            { 
+            using (var context = new Contexto())
             {
                 context.Database.Migrate();
+            }
             }
 
             app.UseMvc();

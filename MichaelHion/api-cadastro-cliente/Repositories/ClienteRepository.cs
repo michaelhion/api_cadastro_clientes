@@ -9,66 +9,74 @@ namespace api_cadastro_cliente.Repositories
 {
     public class ClienteRepository : IClientes
     {
+        private readonly Contexto _context;
+
+        public ClienteRepository(Contexto context)
+        {
+            _context = context;
+        }
+
         public void deleteCliente(string Id)
         {
-            using (ClienteContexto ctx = new ClienteContexto())
-            {
+            //using (var ctx = new Contexto())
+            //{
                 var existe = findById(Id);
                 if (existe != null)
                 {
-                    ctx.Clientes.Remove(existe);
-                    ctx.SaveChanges();
+                    
+                    _context.Remove(existe);
+                    _context.SaveChanges();
                 }
 
-            }
+            //}
         }
 
         public void editarCliente(string Id, ClienteModel cliente)
         {
-            using (ClienteContexto ctx = new ClienteContexto())
-            {
+            //using (Contexto ctx = new Contexto())
+            //{
                 var existe = findById(Id);
                 if (existe != null)
                 {
                     existe.FirstName = (cliente.FirstName == "" || cliente.FirstName == null) ? existe.FirstName : cliente.FirstName;
                     existe.Surname = (cliente.Surname == "" || cliente.Surname == null) ? existe.Surname : cliente.Surname;
                     existe.Age = (cliente.Age == 0) ? cliente.Age : cliente.Age;
-                    
-                    ctx.Clientes.Update(cliente);
-                    ctx.SaveChanges();
+                    existe.CreationDate = DateTime.Now;
+                    _context.ClienteModels.Update(existe);
+                    _context.SaveChanges();
                 }
 
-            }
+           // }
         }
 
         public ClienteModel findById(string Id)
         {
-            using (ClienteContexto ctx = new ClienteContexto())
-            {
-                return ctx.Clientes.FirstOrDefault(c => c.Id == Id);
+            //using (Contexto ctx = new Contexto())
+            //{
+                return _context.ClienteModels.FirstOrDefault(c => c.Id == Id);
 
-            }
+            //}
         }
 
         public void inserirCliente(ClienteModel cliente)
         {
-            using (ClienteContexto ctx = new ClienteContexto())
-            {
+            //using (Contexto ctx = new Contexto())
+            //{
                 string uuid = Guid.NewGuid().ToString();
                 cliente.Id = uuid;
-                cliente.creationDate = DateTime.Now;
-                ctx.Clientes.Add(cliente);
-                ctx.SaveChanges();
+                cliente.CreationDate = DateTime.Now;
+                _context.ClienteModels.Add(cliente);
+                _context.SaveChanges();
 
-            }
+            //}
         }
 
         public List<ClienteModel> listarCliente()
         {
-            using (ClienteContexto ctx = new ClienteContexto())
-            {
-                return ctx.Clientes.ToList();
-            }
+            //using (Contexto ctx = new Contexto())
+            //{
+                return _context.ClienteModels.ToList();
+           // }
         }
     }
 }

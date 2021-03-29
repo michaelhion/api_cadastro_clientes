@@ -1,6 +1,7 @@
 ﻿using api_cadastro_cliente.Context;
 using api_cadastro_cliente.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace api_cadastro_cliente.Controllers
     [ApiController]
     public class ClientesController : ControllerBase
     {
+        
+        
         private readonly IClientes _iclientes;
 
         public ClientesController(IClientes iclientes)
@@ -22,6 +25,7 @@ namespace api_cadastro_cliente.Controllers
 
         [HttpGet]
         public ActionResult listarCliente()
+        
         {
             var buscar = _iclientes.listarCliente();
             if (buscar.Count != 0)
@@ -88,7 +92,7 @@ namespace api_cadastro_cliente.Controllers
             var buscar = _iclientes.findById(Id);
             if (buscar != null)
             {
-                cliente.creationDate = DateTime.Now;
+                
                 _iclientes.editarCliente(cliente.Id, cliente);
                 return StatusCode(202, "Usuario atualizado com suceso!");
             }

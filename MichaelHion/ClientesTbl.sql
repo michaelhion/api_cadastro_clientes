@@ -1,6 +1,6 @@
 create DATABASE Intelitrader; 
 use Intelitrader;
-create table Clientes(
+create table ClienteModels(
 Id VARCHAR(255) PRIMARY KEY,
 FirstName VARCHAR(255) NOT NULL,
 Surname VARCHAR(255) NOT NULL,
