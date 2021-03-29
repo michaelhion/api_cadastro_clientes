@@ -12122,11 +12122,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\michael\\Desktop\\goiabeira\\MichaelHion\\api-cadastro-cliente\\api_cadastro_cliente.csproj",
+      "projectUniqueName": "C:\\Users\\michael\\Desktop\\Serviço intelitrader\\MichaelHion\\MichaelHion\\api-cadastro-cliente\\api_cadastro_cliente.csproj",
       "projectName": "api_cadastro_cliente",
-      "projectPath": "C:\\Users\\michael\\Desktop\\goiabeira\\MichaelHion\\api-cadastro-cliente\\api_cadastro_cliente.csproj",
+      "projectPath": "C:\\Users\\michael\\Desktop\\Serviço intelitrader\\MichaelHion\\MichaelHion\\api-cadastro-cliente\\api_cadastro_cliente.csproj",
       "packagesPath": "C:\\Users\\michael\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\michael\\Desktop\\goiabeira\\MichaelHion\\api-cadastro-cliente\\obj\\",
+      "outputPath": "C:\\Users\\michael\\Desktop\\Serviço intelitrader\\MichaelHion\\MichaelHion\\api-cadastro-cliente\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

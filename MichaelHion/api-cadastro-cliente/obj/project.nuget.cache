@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ErxuUNi+Va0Ipphyo1DIMZx6ulaCXDFSoNPq+dg1MVXXKSNHg1KGQYcpUoDahyO1+wI9qQOe4oL9FucS3+MKVw==",
+  "dgSpecHash": "gfTHQONeIE5xDRDRGUPJaaO2W0UiUvoukUhAZZVHyVPWAJOEPV/FfZf1/7Nr/+hViJW6AfCJsdjHCmTJhCCWnQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\michael\\Desktop\\goiabeira\\MichaelHion\\api-cadastro-cliente\\api_cadastro_cliente.csproj",
+  "projectFilePath": "C:\\Users\\michael\\Desktop\\Serviço intelitrader\\MichaelHion\\MichaelHion\\api-cadastro-cliente\\api_cadastro_cliente.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\michael\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Users\\michael\\.nuget\\packages\\microsoft.aspnetcore\\2.1.1\\microsoft.aspnetcore.2.1.1.nupkg.sha512",
