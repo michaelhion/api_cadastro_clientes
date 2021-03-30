@@ -1,4 +1,7 @@
 version: "3.9"
+networks:
+         default:
+            name: redelocal
 services:
     web:
         build: ./api-cadastro-cliente
@@ -11,3 +14,5 @@ services:
         environment:
             SA_PASSWORD: "bQ7gE5tL@@xm9WTa"
             ACCEPT_EULA: "Y"
+  
+    
