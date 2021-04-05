@@ -14,5 +14,3 @@ services:
         environment:
             SA_PASSWORD: "bQ7gE5tL@@xm9WTa"
             ACCEPT_EULA: "Y"
-  
-    

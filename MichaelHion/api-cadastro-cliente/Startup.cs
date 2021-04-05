@@ -43,7 +43,7 @@ namespace api_cadastro_cliente
                     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
                 })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddTransient<IClientes, ClienteRepository>();
+            services.AddSingleton<IClientes, ClienteRepository>();
 
             services.AddDbContext<Contexto>(o => o.UseSqlServer(Configuration.GetSection("connection2").Value));
         }
